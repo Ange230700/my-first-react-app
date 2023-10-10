@@ -1,6 +1,6 @@
-./src/components/SayHello.jsx
-./src/components/WeatherIcon.jsx
-./src/components/MyTitle.jsx
+src/components/SayHello.jsx
+src/components/WeatherIcon.jsx
+src/components/MyTitle.jsx
 
 # Logs
 logs
