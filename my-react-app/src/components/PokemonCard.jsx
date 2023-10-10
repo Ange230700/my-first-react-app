@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
-function PokemonCard(props) {
-    console.log(props);
+function PokemonCard({ pokemon }) {
+    console.log(pokemon);
 
-    if (props.pokemon.imgSrc) {
+    if (pokemon.imgSrc) {
         return (
             <figure>
                 <img
-                    src={props.pokemon.imgSrc} alt={props.pokemon.name}
+                    src={pokemon.imgSrc} alt={pokemon.name}
                 />
-                <figcaption>{props.pokemon.name}</figcaption>
+                <figcaption>{pokemon.name}</figcaption>
             </figure>
         );
     }

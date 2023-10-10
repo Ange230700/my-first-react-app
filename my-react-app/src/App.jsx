@@ -16,15 +16,8 @@ function App() {
     },
   ];
 
-  const pokemon = pokemonList[0];
-
-  return (
-    <div>
-      <div>
-        <PokemonCard pokemon={pokemon}/>
-      </div>
-    </div>
-  );
+  return <PokemonCard pokemon={pokemonList[0]}/>;
+    
   // return SayHello(
   //   {
   //     name: 'Wilder'
