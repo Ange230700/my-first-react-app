@@ -13,6 +13,7 @@ function PokemonCard({ pokemon }) {
             </figure>
         );
     }
+    return <p>???</p>;
 }
 
 PokemonCard.propTypes = {
