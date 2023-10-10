@@ -1,16 +1,21 @@
 import './App.css';
-import PokemonCard from './components/PokemonCard';
+// import PokemonCard from './components/PokemonCard';
 // import MyTitle from './components/MyTitle';
-// import SayHello from './components/SayHello';
+import SayHello from './components/SayHello';
 // import WeatherIcon from './components/WeatherIcon';
 
 function App() {
-  return (
-    <div>
-      <div>
-        <PokemonCard />
-      </div>
-    </div>
+  // return (
+  //   <div>
+  //     <div>
+  //       <PokemonCard />
+  //     </div>
+  //   </div>
+  // );
+  return SayHello(
+    {
+      name: 'Wilder'
+    }
   );
 }
 
