@@ -34,7 +34,6 @@ function App() {
   return (
     <>
       <NavBar
-        pokemonIndex={pokemonIndex}
         pokemonList={pokemonList}
         setPokemonIndex={setPokemonIndex}
       />
