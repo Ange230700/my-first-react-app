@@ -1,6 +1,7 @@
-import { useState } from 'react';
 import './App.css';
+import { useState } from 'react';
 import PokemonCard from './components/PokemonCard';
+import NavBar from './components/NavBar';
 
 function App() {
   const pokemonList = [
@@ -29,49 +30,16 @@ function App() {
     },
   ];
 
-  const pokemonIndex = useState(0);
-  console.log(pokemonIndex);
-
-  const handleClickOnPreviousButton = () => {
-    if (pokemonIndex[0] > 0) {
-      pokemonIndex[1](pokemonIndex[0] - 1); // pokemonIndex[1] is the setter function
-    }
-  }
-
-  const handleClickOnNextButton = () => {
-    if (pokemonIndex[0] < pokemonList.length - 1) {
-      pokemonIndex[1](pokemonIndex[0] + 1);
-    }
-  }
-
+  const [pokemonIndex, setPokemonIndex] = useState(0);
   return (
-    pokemonIndex[0] === 0 ? (
-      <>
-        <PokemonCard pokemon={pokemonList[pokemonIndex[0]]} />
-        <div className="buttons">
-          {/* <button onClick={handleClickOnPreviousButton}>Previous</button> */}
-          <button onClick={handleClickOnNextButton}>Next</button>
-        </div>
-      </>
-    ) : (
-      pokemonIndex[0] === pokemonList.length - 1 ? (
-        <>
-          <PokemonCard pokemon={pokemonList[pokemonIndex[0]]} />
-          <div className="buttons">
-            <button onClick={handleClickOnPreviousButton}>Previous</button>
-            {/* <button onClick={handleClickOnNextButton}>Next</button> */}
-          </div>
-        </>
-      ) : (
-        <>
-          <PokemonCard pokemon={pokemonList[pokemonIndex[0]]} />
-          <div className="buttons">
-            <button onClick={handleClickOnPreviousButton}>Previous</button>
-            <button onClick={handleClickOnNextButton}>Next</button>
-          </div>
-        </>
-      )
-    )
+    <>
+      <NavBar
+        pokemonIndex={pokemonIndex}
+        pokemonList={pokemonList}
+        setPokemonIndex={setPokemonIndex}
+      />
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+    </>
   );
 }
 
