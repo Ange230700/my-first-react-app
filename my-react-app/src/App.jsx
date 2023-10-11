@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import PokemonCard from './components/PokemonCard';
 
@@ -13,7 +14,10 @@ function App() {
     },
   ];
 
-  return <PokemonCard pokemon={pokemonList[0]}/>;
+  const pokemonIndex = useState(0);
+  console.log(pokemonIndex);
+
+  return <PokemonCard pokemon={pokemonList[0]} />;
 }
 
 export default App;
