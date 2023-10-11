@@ -9,21 +9,20 @@ const pokemonList = [
 ];
 
 function PokemonCard() {
-    // for (const pokemon of pokemonList) {}
     const pokemon = pokemonList[0];
-    // const pokemon = pokemonList[1];
-    if (pokemon.imgSrc) {
-        return (
+    return (
+        pokemon.imgSrc ? (
             <figure>
-                <img
-                    src={pokemon.imgSrc} alt={pokemon.name}
-                />
+                <img src={pokemon.imgSrc} alt={pokemon.name} />
                 <figcaption>{pokemon.name}</figcaption>
             </figure>
-        );
-    }
-    return <p>???</p>;
-
+        ) : (
+            <>
+                <p>???</p>
+                <p>{pokemon.name}</p>
+            </>
+        )
+    );
 }
 
 export default PokemonCard;
