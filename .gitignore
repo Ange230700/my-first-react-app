@@ -1,1 +1,4 @@
 .vscode
+my-react-app/src/components/SayHello.jsx
+my-react-app/src/components/WeatherIcon.jsx
+my-react-app/src/components/MyTitle.jsx
