@@ -1,8 +1,5 @@
 import './App.css';
 import PokemonCard from './components/PokemonCard';
-// import MyTitle from './components/MyTitle';
-// import SayHello from './components/SayHello';
-// import WeatherIcon from './components/WeatherIcon';
 
 function App() {
 
@@ -25,11 +22,6 @@ function App() {
       </div>
     </div>
   );
-  // return SayHello(
-  //   {
-  //     name: 'Wilder'
-  //   }
-  // );
 }
 
 export default App;
