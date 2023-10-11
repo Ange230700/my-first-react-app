@@ -17,7 +17,21 @@ function App() {
   const pokemonIndex = useState(0);
   console.log(pokemonIndex);
 
-  return <PokemonCard pokemon={pokemonList[0]} />;
+  const handleClickOnPreviousButton = () => {
+  }
+  
+  const handleClickOnNextButton = () => {
+  }
+  
+  return (
+    <>
+      <PokemonCard pokemon={pokemonList[0]} />
+      <div className="buttons">
+        <button onClick={handleClickOnPreviousButton}>Previous</button>
+        <button onClick={handleClickOnNextButton}>Next</button>
+      </div>
+    </>
+  );
 }
 
 export default App;
