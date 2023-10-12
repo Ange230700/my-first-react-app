@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
 
-function NavBar({ pokemonList }) {
+function NavBar({ pokemonList, setPokemonIndex }) {
+    const handleClickOnPokemonButton = (arg) => {
+        setPokemonIndex(arg)
+    }
     return (
         <>
             {
                 pokemonList.map(
-                    (pokemon) => (
-                        <button key={pokemon.name}>{pokemon.name}</button>
+                    (pokemon, index) => (
+                        <button key={pokemon.name} onClick={() => {
+                            handleClickOnPokemonButton(index)
+                        }}>{pokemon.name}</button>
                     )
                 )
             }
@@ -15,7 +20,13 @@ function NavBar({ pokemonList }) {
 }
 
 NavBar.propTypes = {
-    pokemonList: PropTypes.array.isRequired
+    pokemonList: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            imgSrc: PropTypes.string
+        })
+    ),
+    setPokemonIndex: PropTypes.func.isRequired
 };
 
 export default NavBar;
