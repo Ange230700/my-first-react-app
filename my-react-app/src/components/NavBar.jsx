@@ -5,7 +5,7 @@ function NavBar({ pokemonList, setPokemonIndex }) {
         setPokemonIndex(arg)
     }
     return (
-        <>
+        <div className='buttons'>
             {
                 pokemonList.map(
                     (pokemon, index) => (
@@ -15,7 +15,7 @@ function NavBar({ pokemonList, setPokemonIndex }) {
                     )
                 )
             }
-        </>
+        </div>
     );
 }
 
