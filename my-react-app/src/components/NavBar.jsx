@@ -4,13 +4,28 @@ function NavBar({ pokemonList, setPokemonIndex }) {
     const handleClickOnPokemonButton = (arg) => {
         setPokemonIndex(arg)
     }
+    const handleClickOnPikachuButton = () => {
+        setPokemonIndex(pokemonList.indexOf(pokemonList.find((pokemon) => pokemon.name === "pikachu")));
+        alert("Pika pikachu!!!");
+    }
     return (
         <>
             {
                 pokemonList.map(
                     (pokemon, index) => (
                         <button key={pokemon.name} onClick={() => {
-                            handleClickOnPokemonButton(index)
+                            (
+                                index ===
+                                    pokemonList.indexOf(
+                                        pokemonList.find(
+                                            (pokemon) => pokemon.name === "pikachu"
+                                        )
+                                    )
+                            )
+                              ? 
+                                handleClickOnPikachuButton()
+                              : 
+                                handleClickOnPokemonButton(index);
                         }}>{pokemon.name}</button>
                     )
                 )
