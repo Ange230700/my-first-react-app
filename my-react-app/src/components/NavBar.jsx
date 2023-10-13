@@ -24,7 +24,7 @@ function NavBar({ pokemonList, setPokemonIndex }) {
                             )
                               ? 
                                 handleClickOnPikachuButton()
-                              : 
+                                  : 
                                 handleClickOnPokemonButton(index);
                         }}>{pokemon.name}</button>
                     )

@@ -31,6 +31,8 @@ function App() {
     },
   ];
 
+  // console.log(pokemonList);
+
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
   useEffect(
