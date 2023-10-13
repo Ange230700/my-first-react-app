@@ -9,7 +9,7 @@ function NavBar({ pokemonList, setPokemonIndex }) {
         alert("Pika pikachu!!!");
     }
     return (
-        <>
+        <div className='buttons'>
             {
                 pokemonList.map(
                     (pokemon, index) => (
@@ -30,7 +30,7 @@ function NavBar({ pokemonList, setPokemonIndex }) {
                     )
                 )
             }
-        </>
+        </div>
     );
 }
 
